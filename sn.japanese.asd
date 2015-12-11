@@ -16,15 +16,15 @@
   (:use :cl :asdf))
 (in-package :sn.japanese-asd)
 
-
 (defsystem sn.japanese
   :version "0.1"
   :author "SANO Masatoshi"
   :mailto "snmsts@gmail.com"
   :license "MIT"
-  :depends-on ()
+  :depends-on (:dexador :plump)
   :components ((:module "src"
                 :components
-                ((:file "package"))))
+                ((:file "package")
+                 (:file "experiment"))))
   :description "sn.japanese"
   :in-order-to ((test-op (load-op :sn.japanese.test))))

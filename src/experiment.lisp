@@ -3,11 +3,10 @@
 (defun convert-ascii (ascii table))
 (defgeneric convert (driver string))
 
-(ql:quickload '(:dexador :plump))
-
-(defvar *prefix*  #.(asdf:system-relative-pathname
+(defvar *prefix* #.(asdf:system-relative-pathname
                      :sn.japanese
                      #p"table/"))
+
 (defvar *roman-table-uri*
   "https://raw.githubusercontent.com/nathancorvussolis/corvusskk/master/installer/config-sample/config%20-%20roman.xml")
 (defvar *downolad-table-method* 'download-corvusskk)
